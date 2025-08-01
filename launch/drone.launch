@@ -1,0 +1,28 @@
+<launch>
+  <!-- OAK-D Pro Stereo Configuration -->
+  <node pkg="depthai_ros" type="stereo_inertial_node" name="oak_stereo" output="screen">
+    <param name="resolution" value="THE_720_P"/>
+    <param name="fps" value="30"/>
+    <param name="enableDepth" value="true"/>
+    <param name="depthConfidenceThreshold" value="150"/>
+    <param name="lrcheck" value="true"/>
+    <param name="medianDisparity" value="true"/>
+  </node>
+
+  <!-- AprilTag Detection -->
+  <node pkg="apriltag_ros" type="apriltag_ros_continuous_node" name="apriltag_detector" output="screen">
+    <remap from="image_rect" to="/stereo_inertial_node/left/image_rect"/>
+    <remap from="camera_info" to="/stereo_inertial_node/left/camera_info"/>
+    <param name="tag_family" value="tag36h11"/>
+    <param name="tag_size" value="0.1"/>
+    <param name="max_detection_distance" value="3.0"/>
+  </node>
+
+  <!-- MAVROS -->
+  <include file="$(find mavros)/launch/apm.launch">
+    <arg name="fcu_url" value="udp://:14540@localhost:14557"/>
+  </include>
+
+  <!-- Unified Flight Controller -->
+  <node pkg="unified_drone_system" type="unified_flight_controller.py" name="flight_controller" output="screen"/>
+</launch>
