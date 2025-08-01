@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="drone_setup" type="downward_apriltag_node.py" name="downward_apriltag_node" output="screen"/>
+</launch>
