@@ -1,6 +1,0 @@
-# AprilTag Detection Parameters
-tag_family: "tag36h11"
-tag_size: 0.1  # 10cm
-max_detection_distance: 3.0
-decode_sharpening: 0.25
-max_hamming_distance: 1
