@@ -20,11 +20,11 @@ catkin_make
 
 # Create ROS package
 cd ~/catkin_ws/src
-catkin_create_pkg drone_setup rospy geometry_msgs mavros_msgs apriltag_ros tf
+catkin_create_pkg unified_drone_system rospy geometry_msgs mavros_msgs apriltag_ros tf nav_msgs std_msgs
 cd ../
 catkin_make
 
 # Make node executable
-chmod +x ~/catkin_ws/src/drone_setup/scripts/downward_apriltag_node.py
+chmod +x ~/catkin_ws/src/unified_drone_system/scripts/unified_flight_controller.py
 
 echo "Installation complete! Reboot your system."
