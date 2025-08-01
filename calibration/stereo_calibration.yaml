@@ -1,7 +1,7 @@
 # OAK-D Pro Stereo Calibration
-camera_matrix_left: [[fx, 0, cx], [0, fy, cy], [0, 0, 1]]
-distortion_coefficients_left: [k1, k2, p1, p2, k3]
-camera_matrix_right: [[fx, 0, cx], [0, fy, cy], [0, 0, 1]]
-distortion_coefficients_right: [k1, k2, p1, p2, k3]
-R: [[1, 0, 0], [0, 1, 0], [0, 0, 1]]  # Rotation matrix
-T: [baseline, 0, 0]  # Translation vector
+camera_matrix_left: [[600, 0, 320], [0, 600, 240], [0, 0, 1]]
+distortion_coefficients_left: [0.1, -0.2, 0.001, 0.002, 0.0]
+camera_matrix_right: [[600, 0, 320], [0, 600, 240], [0, 0, 1]]
+distortion_coefficients_right: [0.1, -0.2, 0.001, 0.002, 0.0]
+R: [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+T: [0.1, 0, 0]  # 10cm baseline
