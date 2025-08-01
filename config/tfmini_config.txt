@@ -1,0 +1,5 @@
+TFmini UART Connection:
+- TFmini TX → CUAV V5+ RX
+- TFmini RX → CUAV V5+ TX
+- TFmini GND → CUAV V5+ GND
+- TFmini VCC → CUAV V5+ 5V
