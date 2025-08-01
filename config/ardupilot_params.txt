@@ -1,0 +1,27 @@
+# Enable external vision for position and yaw
+EK3_SRC1_POSXY = 6    # Vision for horizontal position
+EK3_SRC1_VELXY = 6    # Vision for velocity
+EK3_SRC1_YAW = 6      # Vision for yaw (from AprilTag)
+EK3_SRC1_POSZ = 3     # TFmini for altitude
+VISO_TYPE = 1         # Enable vision system
+
+# Moving platform takeoff
+TKOFF_MOTN = 1        # Enable moving platform takeoff
+TKOFF_ALT = 15        # Target altitude (meters)
+
+# EKF3 tuning
+EK3_POSNE_NOISE = 0.1 # Position noise
+EK3_YAW_NOISE = 0.01  # Yaw noise
+EK3_SRC1_DELAY = 50   # Vision data latency (ms)
+
+# TFmini Configuration
+RNGFND1_TYPE = 8      # Benewake TFmini
+RNGFND1_ORIENT = 25   # Downward-facing
+RNGFND1_MIN_CM = 10
+RNGFND1_MAX_CM = 1200
+
+# Safety
+FENCE_ENABLE = 1      # Geofence enabled
+FS_GPS_ENABLE = 1     # Failsafe if GPS lost
+FS_THR_ENABLE = 1     # Auto-land on signal loss
+FS_BATT_ENABLE = 1    # Auto-land at low voltage
