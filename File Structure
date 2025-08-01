@@ -1,0 +1,15 @@
+/drone_setup/
+├── launch/
+│   ├── oak_downward.launch
+│   ├── mavros.launch
+│   └── apriltag_processor.launch
+├── scripts/
+│   ├── downward_apriltag_node.py
+│   └── install_dependencies.sh
+├── config/
+│   ├── ardupilot_params.txt
+│   └── tfmini_config.txt
+├── calibration/
+│   ├── stereo_calibration.yaml
+│   └── apriltag_calibration.yaml
+└── README.md
