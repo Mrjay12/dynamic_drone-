@@ -14,6 +14,7 @@ TKOFF_ALT = 15        # Target altitude (meters)
 EK3_POSNE_NOISE = 0.1 # Position noise
 EK3_YAW_NOISE = 0.01  # Yaw noise
 EK3_SRC1_DELAY = 50   # Vision data latency (ms)
+EK3_VELNE_NOISE = 0.1   # Velocity noise (lower = trust VIO more)
 
 # TFmini Configuration
 RNGFND1_TYPE = 8      # Benewake TFmini
