@@ -27,3 +27,8 @@ FENCE_ENABLE = 1      # Geofence enabled
 FS_GPS_ENABLE = 1     # Failsafe if GPS lost
 FS_THR_ENABLE = 1     # Auto-land on signal loss
 FS_BATT_ENABLE = 1    # Auto-land at low voltage
+
+# Complementary filter weights
+ALPHA_POS = 0.1    # Trust AprilTag 90% for position
+ALPHA_YAW = 0.1    # Trust AprilTag 90% for yaw
+ALPHA_VEL = 0.8    # Trust VIO 80% for velocity
