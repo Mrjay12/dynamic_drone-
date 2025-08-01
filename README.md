@@ -22,3 +22,6 @@ This package enables precise takeoff from moving platforms using:
    ```bash
    chmod +x scripts/install_dependencies.sh
    ./scripts/install_dependencies.sh
+
+## Launch
+roslaunch drone.launch
