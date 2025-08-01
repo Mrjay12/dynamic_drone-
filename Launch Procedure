@@ -1,0 +1,3 @@
+roslaunch drone_setup oak_downward.launch
+roslaunch drone_setup mavros.launch
+roslaunch drone_setup apriltag_processor.launch
