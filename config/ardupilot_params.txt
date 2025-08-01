@@ -32,3 +32,10 @@ FS_BATT_ENABLE = 1    # Auto-land at low voltage
 ALPHA_POS = 0.1    # Trust AprilTag 90% for position
 ALPHA_YAW = 0.1    # Trust AprilTag 90% for yaw
 ALPHA_VEL = 0.8    # Trust VIO 80% for velocity
+
+ Landing parameters
+PLND_ENABLED = 1      # Enable precision landing
+PLND_TYPE = 1         # Vision-based landing
+PLND_EST_TYPE = 0     # Use raw sensor data
+LAND_SPEED = 0.3      # Descent speed (m/s)
+LAND_REPOSITION = 1   # Allow repositioning during landing
