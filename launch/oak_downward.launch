@@ -1,0 +1,26 @@
+launch/oak_downward.launch
+
+<launch>
+  <!-- OAK-D Pro Stereo Configuration (Grayscale) -->
+  <node pkg="depthai_ros" type="stereo_inertial_node" name="oak_stereo" output="screen">
+    <param name="resolution" value="THE_720_P"/>
+    <param name="fps" value="30"/>
+    <param name="enableDepth" value="true"/>
+    <param name="depthConfidenceThreshold" value="150"/>
+    <param name="lrcheck" value="true"/>
+    <param name="medianDisparity" value="true"/>
+    <remap from="/stereo_inertial_node/left/image_rect" to="/camera/left/image_rect"/>
+    <remap from="/stereo_inertial_node/left/camera_info" to="/camera/left/camera_info"/>
+  </node>
+
+  <!-- AprilTag Detection (using left mono camera) -->
+  <node pkg="apriltag_ros" type="apriltag_ros_continuous_node" name="apriltag_detector" output="screen">
+    <remap from="image_rect" to="/camera/left/image_rect"/>
+    <remap from="camera_info" to="/camera/left/camera_info"/>
+    <param name="tag_family" value="tag36h11"/>
+    <param name="tag_size" value="0.1"/>
+    <param name="max_detection_distance" value="3.0"/>
+    <param name="decode_sharpening" value="0.25"/>
+    <param name="max_hamming_distance" value="1"/>
+  </node>
+</launch>
